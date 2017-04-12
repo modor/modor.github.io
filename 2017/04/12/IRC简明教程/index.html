@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/logo.png"><link rel="stylesheet" href="/styles.css"><title> | </title></head><body><div class="container"><div class="columns"><div class="navigation"><nav class="menus-main"><a href="/" class="favicon"><img src="/logo.png"></a><a href="/">首页</a><a href="/article">技术文章</a><a href="/translate">我的翻译</a><a href="/essay">日常随笔</a><a href="/author">关于作者</a></nav><nav class="right menus-right"><a href="/">RSS</a><a target="_blank" href="https://github.com/modor">Github</a></nav></div></div><div class="columns"><div class="block-body column three-fourths"><article><header><small class="right"><a target="_blank" href="null_posts%2FIRC%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.md">查看源代码</a></small><h1></h1></header><div class="article-meta clearfix"><time class="left">2017-04-12</time><ul class="tags left"></ul><ul class="tags right"></ul></div><div class="markdown-body"><p>作为IT行业的一员，平时我们除了在Google和stackoverflow上搜索问题答案，还可以到IRC相对应的频道上提问难以搜到答案的问题。</p>
+<p><strong>什么是IRC</strong></p>
+<p>IRC是一个类似于QQ、MSN的网络聊天工具，但是IRC不提倡单窗口私聊，所以没有类似的好友管理功能，而只有聊天室或者群(IRC里面叫频道)功能。</p>
+<p>IRC有很多客户端(类似QQ客户端)和网络(类似于游戏里面的区)供选择，下面我们以一个web客户端(类似web QQ，默认连接的区为freenode区)为例说明使用方式。</p>
+<p><strong>登录</strong></p>
+<p>登录到<a href="https://webchat.freenode.net/" target="_blank" rel="external">webchat</a><br>给自己随便起一个英文昵称，填写一个频道(以docker频道为例, 写法为#docker)，输入验证码后点connect就可以登录到IRC了。登录很可能提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">This nickname is registered</div></pre></td></tr></table></figure></p>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">you need to be identified with services</div></pre></td></tr></table></figure></p>
+<p>前者是因为你的昵称重复了，后者是因为docker频道限制为必须注册用户才能登录。在IRC世界里昵称必须是全网唯一的。</p>
+<p><strong>注册</strong></p>
+<p>登录之后你就可以选择一个正式的昵称进行注册了。选择一个正式的昵称(如果没有提示重复并昵称是你决定的请忽略)，在登录后的最下面提示框里输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/nick 新昵称</div></pre></td></tr></table></figure></p>
+<p>如果仍然提示重复，请更换，没有重复请输入注册命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/ns register [你的密码] [你的邮箱地址]</div></pre></td></tr></table></figure>
+<p>注册之后会发一封确认邮件到你的邮箱地址里面，然后把确认信息贴在提示框里确认就注册成功了。</p>
+<p><strong>使用</strong></p>
+<p>注册成功之后我们就可以使用该昵称进入docer频道，输入命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/j #docker</div></pre></td></tr></table></figure></p>
+<p>再次登录的时候只要进行身份认证就可以了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/ns identify [你的密码]</div></pre></td></tr></table></figure></p>
+<p><strong>注销</strong></p>
+<p>如果觉着昵称不满意停止使用，可以注销：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/ns drop [你的昵称]</div></pre></td></tr></table></figure></p>
+<p><strong>其他常见操作</strong></p>
+<p>修改密码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/ns set [你的旧密码] [你的新密码]</div></pre></td></tr></table></figure></p>
+<p>设置新邮箱:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/ns set email [你的新邮箱]</div></pre></td></tr></table></figure></p>
+<p>查看房间信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/cs info #[频道名字]</div></pre></td></tr></table></figure></p>
+<p>查名字注册信息:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/ns info [要查询的昵称]</div></pre></td></tr></table></figure></p>
+<p>更多的关于提问规范、使用方法请见：<a href="http://wiki.ubuntu.org.cn/IRC%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" target="_blank" rel="external">IRC使用</a></p>
+</div></article></div><div class="block-sidebar column one-fourth"><div class="widget text-content"><h2 id="-u-u-"><u>分类目录</u></h2>
+<ul>
+<li><a href="/classify/docker">Docker</a>(1)</li>
+<li><a href="/classify/linux">Linux</a>(1)</li>
+<li><a href="/classify/kubernetes">Kubernetes</a>(1)</li>
+</ul>
+</div><div class="widget archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li></ul></div><div class="widget text-content"><p>本博客框架使用<a href="http://hexo.io">Hexo</a>生成,基于<a href="https://github.com/jysperm/hexo-theme-simpleblock">simpleblock</a>主题。</p></div></div></div></div></body></html>
